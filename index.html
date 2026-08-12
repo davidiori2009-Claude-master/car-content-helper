@@ -3,65 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service — Car Content Helper</title>
-<meta name="description" content="Terms of Service for Car Content Helper, a private content preparation tool.">
+<title>Car Content Helper</title>
+<meta name="description" content="A private tool that prepares car listing photos and captions, and sends them to the operator's own TikTok drafts for manual publishing.">
 <link rel="stylesheet" href="style.css">
+<style>
+  .lede { font-size: 1.18rem; line-height: 1.6; }
+  .steps { counter-reset: step; display: flex; flex-direction: column; gap: 1.1rem; margin: 0; padding: 0; list-style: none; }
+  .steps li { display: grid; grid-template-columns: 2rem 1fr; gap: .85rem; align-items: baseline; }
+  .steps li::before {
+    counter-increment: step; content: counter(step, decimal-leading-zero);
+    font-family: var(--mono); font-size: .74rem; color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .note { background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent); padding: 1.15rem 1.35rem; }
+  .note p { margin: 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 1.25rem; font-family: var(--mono); font-size: .85rem; }
+</style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <p class="eyebrow">Car Content Helper</p>
-    <h1>Terms of Service</h1>
-    <p class="date">Effective 12 August 2026</p>
+    <p class="eyebrow">Private tool</p>
+    <h1>Car Content Helper</h1>
+    <p class="date">A single-operator utility for preparing vehicle listing posts</p>
   </header>
 
+  <p class="lede">Car Content Helper takes the photographs and written details of a vehicle that is offered for sale, prepares them into a consistent, publish-ready post, and places that post in its operator&rsquo;s own TikTok drafts.</p>
+
   <section>
-    <h2><span class="n">01</span> What this tool is</h2>
-    <p>Car Content Helper (&ldquo;the Tool&rdquo;) is a private, single-operator content preparation utility. It helps its operator organise photographs and written details of vehicles offered for sale, and prepare them for publishing on the operator&rsquo;s own social media accounts.</p>
-    <p>The Tool is not a public service. It is not offered to, sold to, or made available to any other person or organisation.</p>
+    <h2><span class="n">01</span> What it does</h2>
+    <ol class="steps">
+      <li>The operator forwards a vehicle&rsquo;s photographs and description to the tool.</li>
+      <li>The tool reads the description and drafts a short caption: model, year, mileage, power and finance options.</li>
+      <li>It sorts the photographs into a consistent order &mdash; exterior first, then interior, then detail shots.</li>
+      <li>It removes third-party branding from the images, such as a dealership&rsquo;s number plate surround.</li>
+      <li>It uploads the finished set to the operator&rsquo;s own TikTok drafts.</li>
+      <li>The operator opens TikTok, reviews the draft, adds sound, and decides whether to publish.</li>
+    </ol>
   </section>
 
   <section>
-    <h2><span class="n">02</span> Who may use it</h2>
-    <p>Only the operator who installed and configured the Tool may use it. The Tool is locked to a single authorised account and refuses all other requests.</p>
+    <h2><span class="n">02</span> How it uses TikTok</h2>
+    <p>The tool requests one permission: the ability to upload content to the drafts of the account that authorised it. It uploads photographs and a caption, and nothing else.</p>
+    <div class="note">
+      <p><strong>The tool never publishes.</strong> Every post is reviewed and published by hand, by the operator, inside the TikTok app. Nothing reaches an audience without a person deciding to send it.</p>
+    </div>
   </section>
 
   <section>
-    <h2><span class="n">03</span> What the Tool does</h2>
+    <h2><span class="n">03</span> What it does not do</h2>
     <ul>
-      <li>Receives vehicle photographs and text supplied by the operator</li>
-      <li>Organises the photographs into a consistent order</li>
-      <li>Removes third-party branding, such as dealership plate frames, from the photographs</li>
-      <li>Drafts a caption describing the vehicle</li>
-      <li>With the operator&rsquo;s TikTok authorisation, uploads the prepared photographs to the operator&rsquo;s own TikTok drafts</li>
+      <li>It has no users other than its operator, and is locked to a single authorised account.</li>
+      <li>It does not read followers, comments, messages, viewing history or analytics.</li>
+      <li>It does not post publicly, schedule posts, or act without the operator present.</li>
+      <li>It is not sold, licensed or offered to anyone else.</li>
     </ul>
-    <p>The Tool never publishes content. Every post is reviewed, edited and published manually by the operator inside the TikTok application.</p>
   </section>
 
   <section>
-    <h2><span class="n">04</span> Responsibility for content</h2>
-    <p>The operator is solely responsible for the content they choose to prepare and publish, including ensuring they hold the necessary rights and permissions for any photographs and vehicle information used, and that published content is accurate and lawful.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">05</span> Third-party platforms</h2>
-    <p>Use of the Tool alongside TikTok is additionally governed by TikTok&rsquo;s own Terms of Service and Community Guidelines. Nothing in these terms overrides them.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">06</span> No warranty</h2>
-    <p>The Tool is provided &ldquo;as is&rdquo;, without warranty of any kind. It may produce incorrect or incomplete results, and the operator is expected to review all output before publishing.</p>
-  </section>
-
-  <section>
-    <h2><span class="n">07</span> Changes</h2>
-    <p>These terms may be updated. The effective date above reflects the current version.</p>
+    <h2><span class="n">04</span> Where it runs</h2>
+    <p>The tool runs locally on the operator&rsquo;s own desktop computer. Photographs and text are stored on that machine. Branding removal is performed locally. Caption drafting and photo sorting use the Anthropic API; no other service receives the operator&rsquo;s content.</p>
   </section>
 
   <div class="foot">
+    <p class="links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
     <p>Contact &mdash; <strong>tapboost123@gmail.com</strong></p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
   </div>
 
 </div>
